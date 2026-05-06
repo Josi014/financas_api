@@ -30,10 +30,14 @@ var addLancamentoDB = function addLancamentoDB(data) {
       vl_lancamento: data.vl_lancamento,
       dt_lancamento: data.dt_lancamento,
       tp_natureza: data.tp_natureza,
-      cd_tipo_financeiro: data.cd_tipo_financeiro,
       usuario: {
         connect: {
           cd_pessoa: Number(data.cd_pessoa)
+        }
+      },
+      tipo_financeiro: {
+        connect: {
+          cd_tipo_financeiro: Number(data.cd_tipo_financeiro)
         }
       }
     }
