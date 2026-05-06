@@ -29,9 +29,13 @@ var addLancamentoDB = function addLancamentoDB(data) {
       ds_lancamento: data.ds_lancamento,
       vl_lancamento: data.vl_lancamento,
       dt_lancamento: data.dt_lancamento,
-      cd_pessoa: data.cd_pessoa,
+      tp_natureza: data.tp_natureza,
       cd_tipo_financeiro: data.cd_tipo_financeiro,
-      tp_natureza: data.tp_natureza
+      usuario: {
+        connect: {
+          cd_pessoa: Number(data.cd_pessoa)
+        }
+      }
     }
   });
 };
